@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | PitchCraft AI</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+
+<body class="dashboard-page profile-page">
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <span class="logo-icon">✦</span>
+            <span>PitchCraft<span class="logo-highlight">AI</span></span>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-link">
+                <span>⌂</span> Dashboard
+            </a>
+
+            <a href="templates.html" class="nav-link">
+                <span>▦</span> Templates
+            </a>
+
+            <a href="chatbot.html" class="nav-link">
+                <span>✧</span> AI Chatbot
+            </a>
+
+            <a href="profile.html" class="nav-link active">
+                <span>♙</span> My Profile
+            </a>
+
+            <a href="settings.html" class="nav-link">
+                <span>⚙</span> Settings
+            </a>
+
+            <a href="saved.html" class="nav-link">
+                <span>♡</span> Saved / Craft
+            </a>
+
+            <a href="help.html" class="nav-link">
+                <span>ⓘ</span> Help & Support
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="sidebar-user">
+                <div class="user-avatar" id="userAvatar">U</div>
+                <div>
+                    <strong id="userName">User</strong>
+                    <small id="userEmail">Loading...</small>
+                </div>
+            </div>
+
+            <button id="logoutBtn" class="logout-btn">
+                ↪ Logout
+            </button>
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="profile-main">
+
+        <header class="profile-header">
+            <div>
+                <h1>My Profile</h1>
+                <p>Manage your personal information and account details.</p>
+            </div>
+        </header>
+
+        <!-- PROFILE OVERVIEW -->
+        <section class="profile-overview">
+
+            <div class="profile-avatar" id="profileAvatar">U</div>
+
+            <div class="profile-overview-info">
+                <h2 id="profileDisplayName">Loading...</h2>
+                <p id="profileDisplayEmail">Loading...</p>
+                <span class="account-badge">✦ PitchCraft Member</span>
+            </div>
+
+        </section>
+
+        <!-- PROFILE FORM -->
+        <section class="profile-card">
+
+            <div class="profile-card-heading">
+                <div>
+                    <h2>Personal Information</h2>
+                    <p>Update your profile information below.</p>
+                </div>
+            </div>
+
+            <form id="profileForm">
+
+                <div class="profile-form-grid">
+
+                    <div class="profile-field">
+                        <label for="profileName">Full Name</label>
+                        <input
+                            type="text"
+                            id="profileName"
+                            placeholder="Enter your full name"
+                            required
+                        >
+                    </div>
+
+                    <div class="profile-field">
+                        <label for="profileEmail">Email Address</label>
+                        <input
+                            type="email"
+                            id="profileEmail"
+                            readonly
+                        >
+                        <small>Email cannot be changed here.</small>
+                    </div>
+
+                    <div class="profile-field">
+                        <label for="profileBio">About Me</label>
+                        <textarea
+                            id="profileBio"
+                            rows="4"
+                            maxlength="250"
+                            placeholder="Write something about yourself..."
+                        ></textarea>
+                    </div>
+
+                </div>
+
+                <div class="profile-form-actions">
+                    <button type="reset" class="profile-cancel-btn">
+                        Reset
+                    </button>
+
+                    <button type="submit" class="profile-save-btn">
+                        Save Changes
+                    </button>
+                </div>
+
+                <p id="profileMessage" class="profile-message"></p>
+
+            </form>
+
+        </section>
+
+        <!-- ACCOUNT INFORMATION -->
+        <section class="profile-card account-card">
+
+            <h2>Account Information</h2>
+
+            <div class="account-info-row">
+                <span>Account Status</span>
+                <strong class="active-status">● Active</strong>
+            </div>
+
+            <div class="account-info-row">
+                <span>Authentication</span>
+                <strong>Email & Password</strong>
+            </div>
+
+            <div class="account-info-row">
+                <span>Platform</span>
+                <strong>PitchCraft AI</strong>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script type="module" src="../js/profile.js"></script>
+
+</body>
+</html>

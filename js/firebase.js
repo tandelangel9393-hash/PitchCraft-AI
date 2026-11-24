@@ -1,5 +1,5 @@
 // PITCHCRAFT AI - FIREBASE CONFIGURATION
-
+import { getFirestore } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-firestore.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-app.js";
 
 import { getAuth } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-auth.js";
@@ -20,6 +20,6 @@ const app = initializeApp(firebaseConfig);
 
 // Initialize Authentication
 const auth = getAuth(app);
-
+const db = getFirestore(app);
 // Export Firebase Authentication
-export { app, auth };
+export { app, auth, db };
