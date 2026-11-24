@@ -1,0 +1,251 @@
+
+/* PITCHCRAFT AI - SIGNUP PAGE */
+
+.auth-page {
+    min-height: 100vh;
+    background: #f8f7fc;
+}
+
+.auth-container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* LEFT SECTION */
+
+.auth-left {
+    background: linear-gradient(135deg, #7452df, #9b72ed, #c18bea);
+    color: white;
+    padding: 45px 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.auth-logo span {
+    font-size: 32px;
+}
+
+.auth-welcome {
+    max-width: 480px;
+    margin: auto 0;
+    padding: 50px 0;
+}
+
+.auth-welcome h1 {
+    font-size: 43px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.auth-welcome > p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* DECORATION CARD */
+
+.auth-decoration {
+    margin-top: 55px;
+}
+
+.decoration-card {
+    max-width: 330px;
+    padding: 28px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(12px);
+}
+
+.decoration-card span {
+    font-size: 30px;
+}
+
+.decoration-card h3 {
+    font-size: 22px;
+    margin: 15px 0 8px;
+}
+
+.decoration-card p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* RIGHT SECTION */
+
+.auth-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 25px;
+}
+
+.auth-form-wrapper {
+    width: 100%;
+    max-width: 440px;
+}
+
+.auth-form-wrapper h2 {
+    font-size: 32px;
+    color: #24213a;
+    margin-bottom: 10px;
+}
+
+.auth-subtitle {
+    color: #77748b;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* FORM */
+
+.form-group {
+    margin-bottom: 19px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #343047;
+    margin-bottom: 9px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #dedbe9;
+    border-radius: 10px;
+    outline: none;
+    background: white;
+    font-size: 14px;
+    color: #24213a;
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #7452df;
+    box-shadow: 0 0 0 3px rgba(116, 82, 223, 0.1);
+}
+
+/* TERMS */
+
+.terms-row {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 20px 0;
+}
+
+.terms-row input {
+    accent-color: #7452df;
+    width: 16px;
+    height: 16px;
+}
+
+.terms-row label {
+    font-size: 13px;
+    color: #77748b;
+}
+
+/* BUTTON */
+
+.auth-submit {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #7452df, #9b72ed);
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.auth-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(116, 82, 223, 0.25);
+}
+
+/* MESSAGE AND LOGIN LINK */
+
+.auth-message {
+    min-height: 20px;
+    margin-top: 13px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.auth-switch {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 14px;
+    color: #77748b;
+}
+
+.auth-switch a {
+    color: #7452df;
+    font-weight: 700;
+}
+
+.auth-switch a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .auth-container {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-left {
+        min-height: 380px;
+        padding: 35px;
+    }
+
+    .auth-welcome {
+        padding: 45px 0 20px;
+    }
+
+    .auth-welcome h1 {
+        font-size: 34px;
+    }
+
+    .auth-decoration {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .auth-left {
+        min-height: 300px;
+        padding: 25px;
+    }
+
+    .auth-welcome h1 {
+        font-size: 29px;
+    }
+
+    .auth-right {
+        padding: 35px 22px;
+    }
+
+    .auth-form-wrapper h2 {
+        font-size: 27px;
+    }
+}

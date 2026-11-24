@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templates | PitchCraft AI</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/templates.css">
+</head>
+
+<body class="dashboard-page">
+
+    <div class="dashboard-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <a href="dashboard.html" class="sidebar-logo">
+                <span>✦</span> PitchCraft AI
+            </a>
+
+            <p class="sidebar-label">MAIN MENU</p>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="sidebar-link">
+                    <span>▦</span> Dashboard
+                </a>
+
+                <a href="templates.html" class="sidebar-link active">
+                    <span>▧</span> Templates
+                </a>
+
+                <a href="chatbot.html" class="sidebar-link">
+                    <span>✧</span> AI Chatbot
+                </a>
+
+                <a href="profile.html" class="sidebar-link">
+                    <span>♙</span> My Profile
+                </a>
+
+                <a href="settings.html" class="sidebar-link">
+                    <span>⚙</span> Settings
+                </a>
+
+                <a href="saved.html" class="sidebar-link">
+                    <span>♡</span> Saved / Craft
+                </a>
+
+                <a href="help.html" class="sidebar-link">
+                    <span>ⓘ</span> Help & Support
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+                <button id="logoutBtn" class="logout-btn">
+                    ↪ Logout
+                </button>
+            </div>
+
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="dashboard-main templates-main">
+
+            <header class="templates-header">
+                <div>
+                    <span class="page-tag">YOUR CREATIVE SPACE</span>
+                    <h1>Presentation Templates</h1>
+                    <p>
+                        Choose a design or start creating your own presentation.
+                    </p>
+                </div>
+            </header>
+
+            <!-- CREATE YOUR OWN -->
+            <section class="create-own-section">
+
+                <div class="create-own-card">
+
+                    <div class="create-own-content">
+                        <span class="create-label">✦ START FROM SCRATCH</span>
+
+                        <h2>Create Your Own</h2>
+
+                        <p>
+                            Start with a blank presentation and design
+                            everything according to your imagination.
+                        </p>
+
+                        <button id="createOwnBtn" class="create-own-btn">
+                            + Create Blank Presentation
+                        </button>
+                    </div>
+
+                    <div class="create-own-preview">
+                        <div class="blank-slide">
+                            <span>✦</span>
+                            <h3>Your Title Here</h3>
+                            <p>Start creating your story...</p>
+                            <div class="slide-line"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- READY MADE TEMPLATES -->
+            <section class="ready-templates-section">
+
+                <div class="templates-section-heading">
+                    <div>
+                        <h2>Ready-Made Templates</h2>
+                        <p>Find the perfect design for your next presentation.</p>
+                    </div>
+                </div>
+
+                <!-- SEARCH AND FILTER -->
+                <div class="template-controls">
+
+                    <div class="template-search">
+                        <span>⌕</span>
+                        <input
+                            type="search"
+                            id="templateSearch"
+                            placeholder="Search templates..."
+                        >
+                    </div>
+
+                    <select id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="business">Business</option>
+                        <option value="education">Education</option>
+                        <option value="technology">Technology</option>
+                        <option value="creative">Creative</option>
+                        <option value="marketing">Marketing</option>
+                    </select>
+
+                </div>
+
+                <!-- TEMPLATE GRID -->
+                <div class="template-grid" id="templateGrid">
+
+                    <article class="template-card" data-category="business">
+                        <div class="template-preview business-preview">
+                            <span class="preview-label">BUSINESS</span>
+                            <div class="preview-content">
+                                <small>YOUR NEXT BIG IDEA</small>
+                                <h3>Business<br>Proposal</h3>
+                                <div class="preview-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="template-info">
+                            <div>
+                                <h3>Business Proposal</h3>
+                                <p>Professional business presentation</p>
+                            </div>
+                            <button class="use-template-btn" data-template="Business Proposal">
+                                Use Template →
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="template-card" data-category="education">
+                        <div class="template-preview education-preview">
+                            <span class="preview-label">EDUCATION</span>
+                            <div class="preview-content">
+                                <small>LEARN SOMETHING NEW</small>
+                                <h3>Education<br>Presentation</h3>
+                                <div class="preview-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="template-info">
+                            <div>
+                                <h3>Education Presentation</h3>
+                                <p>Simple and informative design</p>
+                            </div>
+                            <button class="use-template-btn" data-template="Education Presentation">
+                                Use Template →
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="template-card" data-category="technology">
+                        <div class="template-preview technology-preview">
+                            <span class="preview-label">TECHNOLOGY</span>
+                            <div class="preview-content">
+                                <small>THE FUTURE IS HERE</small>
+                                <h3>Tech &<br>Innovation</h3>
+                                <div class="preview-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="template-info">
+                            <div>
+                                <h3>Tech & Innovation</h3>
+                                <p>Modern technology-focused design</p>
+                            </div>
+                            <button class="use-template-btn" data-template="Tech & Innovation">
+                                Use Template →
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="template-card" data-category="creative">
+                        <div class="template-preview creative-preview">
+                            <span class="preview-label">CREATIVE</span>
+                            <div class="preview-content">
+                                <small>THINK DIFFERENTLY</small>
+                                <h3>Creative<br>Portfolio</h3>
+                                <div class="preview-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="template-info">
+                            <div>
+                                <h3>Creative Portfolio</h3>
+                                <p>Showcase your creative ideas</p>
+                            </div>
+                            <button class="use-template-btn" data-template="Creative Portfolio">
+                                Use Template →
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="template-card" data-category="marketing">
+                        <div class="template-preview marketing-preview">
+                            <span class="preview-label">MARKETING</span>
+                            <div class="preview-content">
+                                <small>GROW YOUR BRAND</small>
+                                <h3>Marketing<br>Strategy</h3>
+                                <div class="preview-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="template-info">
+                            <div>
+                                <h3>Marketing Strategy</h3>
+                                <p>Present your marketing plans</p>
+                            </div>
+                            <button class="use-template-btn" data-template="Marketing Strategy">
+                                Use Template →
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="template-card" data-category="business">
+                        <div class="template-preview startup-preview">
+                            <span class="preview-label">BUSINESS</span>
+                            <div class="preview-content">
+                                <small>BUILD YOUR VISION</small>
+                                <h3>Startup<br>Pitch Deck</h3>
+                                <div class="preview-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="template-info">
+                            <div>
+                                <h3>Startup Pitch Deck</h3>
+                                <p>Present your startup idea</p>
+                            </div>
+                            <button class="use-template-btn" data-template="Startup Pitch Deck">
+                                Use Template →
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+
+                <p id="noTemplates" class="no-templates" hidden>
+                    No templates found. Try another search.
+                </p>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script type="module" src="../js/templates.js"></script>
+
+</body>
+</html>

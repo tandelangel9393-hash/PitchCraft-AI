@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot | PitchCraft AI</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/chatbot.css">
+</head>
+
+<body class="dashboard-page chatbot-page">
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <span class="logo-icon">✦</span>
+            <span>PitchCraft<span class="logo-highlight">AI</span></span>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html" class="nav-link">
+                <span>⌂</span> Dashboard
+            </a>
+
+            <a href="templates.html" class="nav-link">
+                <span>▦</span> Templates
+            </a>
+
+            <a href="chatbot.html" class="nav-link active">
+                <span>✧</span> AI Chatbot
+            </a>
+
+            <a href="profile.html" class="nav-link">
+                <span>♙</span> My Profile
+            </a>
+
+            <a href="settings.html" class="nav-link">
+                <span>⚙</span> Settings
+            </a>
+
+            <a href="saved.html" class="nav-link">
+                <span>♡</span> Saved / Craft
+            </a>
+
+            <a href="help.html" class="nav-link">
+                <span>ⓘ</span> Help & Support
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-user">
+                <div class="user-avatar" id="userAvatar">U</div>
+
+                <div>
+                    <strong id="userName">User</strong>
+                    <small id="userEmail">Loading...</small>
+                </div>
+            </div>
+
+            <button id="logoutBtn" class="logout-btn">
+                ↪ Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="chatbot-main">
+
+        <!-- HEADER -->
+        <header class="chatbot-header">
+
+            <div>
+                <h1>AI Chatbot</h1>
+                <p>Your creative assistant for better presentations.</p>
+            </div>
+
+            <button id="newChatBtn" class="new-chat-btn">
+                + New Chat
+            </button>
+
+        </header>
+
+        <!-- CHAT WORKSPACE -->
+        <section class="chat-workspace">
+
+            <!-- CHAT AREA -->
+            <div class="chat-container">
+
+                <div class="chat-topbar">
+                    <div class="bot-profile">
+                        <div class="bot-avatar">✦</div>
+
+                        <div>
+                            <h3>PitchCraft Assistant</h3>
+                            <span class="bot-status">
+                                <span class="status-dot"></span>
+                                Ready to help
+                            </span>
+                        </div>
+                    </div>
+
+                    <button id="clearChatBtn" class="clear-chat-btn">
+                        Clear Chat
+                    </button>
+                </div>
+
+                <!-- MESSAGES -->
+                <div class="chat-messages" id="chatMessages">
+
+                    <div class="welcome-message" id="welcomeMessage">
+
+                        <div class="welcome-icon">✦</div>
+
+                        <h2>What are we creating today?</h2>
+
+                        <p>
+                            Ask me anything about presentations.
+                            I can help you with ideas, outlines,
+                            slide content and more.
+                        </p>
+
+                        <div class="suggestion-cards">
+
+                            <button class="suggestion-card"
+                                data-prompt="Create a presentation outline about Artificial Intelligence">
+                                <span>✧</span>
+                                <strong>Generate an Outline</strong>
+                                <small>Create a structured presentation plan.</small>
+                            </button>
+
+                            <button class="suggestion-card"
+                                data-prompt="Give me creative presentation ideas for a college project">
+                                <span>✎</span>
+                                <strong>Get Presentation Ideas</strong>
+                                <small>Discover interesting presentation topics.</small>
+                            </button>
+
+                            <button class="suggestion-card"
+                                data-prompt="Write an introduction slide about my project">
+                                <span>▤</span>
+                                <strong>Write Slide Content</strong>
+                                <small>Create clear and engaging slide text.</small>
+                            </button>
+
+                            <button class="suggestion-card"
+                                data-prompt="Give me tips to improve my presentation design">
+                                <span>✦</span>
+                                <strong>Improve My Slides</strong>
+                                <small>Get useful presentation design tips.</small>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- MESSAGE INPUT -->
+                <div class="chat-input-area">
+
+                    <div class="chat-input-box">
+
+                        <textarea
+                            id="chatInput"
+                            placeholder="Ask PitchCraft Assistant anything..."
+                            rows="1"
+                        ></textarea>
+
+                        <button id="sendMessageBtn" title="Send Message">
+                            ➤
+                        </button>
+
+                    </div>
+
+                    <p class="chat-disclaimer">
+                        AI-generated responses may need review before use.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT SIDEBAR -->
+            <aside class="chat-info-panel">
+
+                <div class="info-card">
+                    <div class="info-icon">✧</div>
+
+                    <h3>AI Writing Assistant</h3>
+
+                    <p>
+                        Turn your ideas into organized presentation
+                        content with help from AI.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <h3>What I Can Help With</h3>
+
+                    <ul class="help-list">
+                        <li>Presentation outlines</li>
+                        <li>Slide content writing</li>
+                        <li>Topic explanations</li>
+                        <li>Presentation titles</li>
+                        <li>Design suggestions</li>
+                        <li>Conclusion writing</li>
+                    </ul>
+                </div>
+
+                <div class="info-card tip-card">
+                    <span>💡</span>
+                    <h3>Quick Tip</h3>
+
+                    <p>
+                        Be specific about your topic, audience
+                        and presentation purpose to get more
+                        useful responses.
+                    </p>
+                </div>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script type="module" src="../js/chatbot.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentation Editor | PitchCraft AI</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/editor.css">
+</head>
+<body class="dashboard-page editor-page">
+
+    <div class="dashboard-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <span class="logo-icon">✦</span>
+                <span>PitchCraft<span class="logo-highlight">AI</span></span>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-link">
+                    <span>⌂</span> Dashboard
+                </a>
+
+                <a href="templates.html" class="nav-link">
+                    <span>▦</span> Templates
+                </a>
+
+                <a href="chatbot.html" class="nav-link">
+                    <span>✧</span> AI Chatbot
+                </a>
+
+                <a href="profile.html" class="nav-link">
+                    <span>♙</span> My Profile
+                </a>
+
+                <a href="settings.html" class="nav-link">
+                    <span>⚙</span> Settings
+                </a>
+
+                <a href="saved.html" class="nav-link">
+                    <span>♡</span> Saved / Craft
+                </a>
+
+                <a href="help.html" class="nav-link">
+                    <span>ⓘ</span> Help & Support
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="sidebar-user">
+                    <div class="user-avatar" id="userAvatar">U</div>
+                    <div>
+                        <strong id="userName">User</strong>
+                        <small id="userEmail">Loading...</small>
+                    </div>
+                </div>
+                <button id="logoutBtn" class="logout-btn">↪ Logout</button>
+            </div>
+        </aside>
+
+        <!-- Main Editor -->
+        <main class="editor-main">
+
+            <!-- Top Toolbar -->
+            <header class="editor-topbar">
+                <div class="editor-title-area">
+                    <a href="templates.html" class="back-link">← Back</a>
+                    <input
+                        type="text"
+                        id="presentationTitle"
+                        value="Untitled Presentation"
+                        aria-label="Presentation title"
+                    >
+                    <span class="save-status" id="saveStatus">Not saved</span>
+                </div>
+
+                <div class="editor-actions">
+                    <button id="saveBtn" class="editor-save-btn">
+                        Save
+                    </button>
+                    <button id="presentBtn" class="present-btn">
+                        ▶ Present
+                    </button>
+                </div>
+            </header>
+
+            <!-- Editor Workspace -->
+            <section class="editor-workspace">
+
+                <!-- Slide Navigation -->
+                <aside class="slides-panel">
+                    <div class="slides-panel-heading">
+                        <h3>Slides</h3>
+                        <button id="addSlideBtn" title="Add new slide">+</button>
+                    </div>
+
+                    <div id="slidesList" class="slides-list">
+                        <div class="slide-thumbnail active" data-slide="0">
+                            <span class="slide-number">1</span>
+                            <div class="thumbnail-preview">
+                                <h4>Presentation Title</h4>
+                                <p>Your subtitle here</p>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Slide Canvas -->
+                <section class="canvas-area">
+                    <div class="canvas-heading">
+                        <span>Slide Editor</span>
+                        <span>16:9 Presentation</span>
+                    </div>
+
+                    <div class="slide-canvas" id="slideCanvas">
+                        <div class="slide-content" id="slideContent">
+                            <h1 contenteditable="true" id="slideHeading">
+                                Presentation Title
+                            </h1>
+                            <p contenteditable="true" id="slideSubtitle">
+                                Add your subtitle here
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="canvas-footer">
+                        <span id="currentSlideNumber">Slide 1 of 1</span>
+                        <span>Click text on the slide to edit it</span>
+                    </div>
+                </section>
+
+                <!-- Editing Tools -->
+                <aside class="properties-panel">
+                    <h3>Slide Properties</h3>
+
+                    <div class="property-group">
+                        <label for="slideBackground">Background Color</label>
+                        <input
+                            type="color"
+                            id="slideBackground"
+                            value="#ffffff"
+                        >
+                    </div>
+
+                    <div class="property-group">
+                        <label for="headingColor">Heading Color</label>
+                        <input
+                            type="color"
+                            id="headingColor"
+                            value="#24213b"
+                        >
+                    </div>
+
+                    <div class="property-group">
+                        <label for="fontSize">Heading Size</label>
+                        <select id="fontSize">
+                            <option value="28">Small</option>
+                            <option value="40" selected>Medium</option>
+                            <option value="52">Large</option>
+                            <option value="64">Extra Large</option>
+                        </select>
+                    </div>
+
+                    <div class="property-group">
+                        <label for="textAlign">Text Alignment</label>
+                        <select id="textAlign">
+                            <option value="left">Left</option>
+                            <option value="center" selected>Center</option>
+                            <option value="right">Right</option>
+                        </select>
+                    </div>
+
+                    <div class="property-group">
+                        <label for="subtitleText">Subtitle</label>
+                        <textarea
+                            id="subtitleText"
+                            rows="3"
+                            placeholder="Enter slide subtitle..."
+                        ></textarea>
+                    </div>
+
+                    <button id="applyChangesBtn" class="apply-changes-btn">
+                        Apply Changes
+                    </button>
+                </aside>
+
+            </section>
+        </main>
+    </div>
+
+    <script type="module" src="../js/editor.js"></script>
+</body>
+</html>

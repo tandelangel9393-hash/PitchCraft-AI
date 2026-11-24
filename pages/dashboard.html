@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | PitchCraft AI</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body class="dashboard-page">
+
+    <div class="dashboard-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <a href="dashboard.html" class="sidebar-logo">
+                <span>✦</span> PitchCraft AI
+            </a>
+
+            <p class="sidebar-label">MAIN MENU</p>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="sidebar-link active">
+                    <span>▦</span> Dashboard
+                </a>
+
+                <a href="templates.html" class="sidebar-link">
+                    <span>▧</span> Templates
+                </a>
+
+                <a href="chatbot.html" class="sidebar-link">
+                    <span>✧</span> AI Chatbot
+                </a>
+
+                <a href="profile.html" class="sidebar-link">
+                    <span>♙</span> My Profile
+                </a>
+
+                <a href="settings.html" class="sidebar-link">
+                    <span>⚙</span> Settings
+                </a>
+
+                <a href="saved.html" class="sidebar-link">
+                    <span>♡</span> Saved / Craft
+                </a>
+
+                <a href="help.html" class="sidebar-link">
+                    <span>ⓘ</span> Help & Support
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+                <button id="logoutBtn" class="logout-btn">
+                    ↪ Logout
+                </button>
+            </div>
+
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="dashboard-main">
+
+            <header class="dashboard-header">
+
+                <div>
+                    <p class="welcome-small">WELCOME BACK!</p>
+                    <h1>Dashboard</h1>
+                    <p class="header-subtitle">
+                        Create something amazing today.
+                    </p>
+                </div>
+
+                <div class="header-profile">
+                    <div class="profile-avatar" id="userAvatar">U</div>
+                    <div>
+                        <h4 id="userName">User</h4>
+                        <p id="userEmail">Welcome to PitchCraft AI</p>
+                    </div>
+                </div>
+
+            </header>
+
+            <!-- WELCOME BANNER -->
+            <section class="welcome-banner">
+
+                <div class="banner-content">
+                    <span class="banner-tag">✦ YOUR CREATIVE SPACE</span>
+
+                    <h2>Turn Your Ideas Into<br>Beautiful Presentations</h2>
+
+                    <p>
+                        Start creating professional presentations
+                        with the power of AI.
+                    </p>
+
+                    <a href="templates.html" class="banner-btn">
+                        Start Creating →
+                    </a>
+                </div>
+
+                <div class="banner-decoration">
+                    <div class="banner-card">
+                        <span>✦</span>
+                        <h3>PitchCraft AI</h3>
+                        <p>Ideas become presentations.</p>
+                        <div class="banner-lines">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- QUICK ACTIONS -->
+            <section class="quick-section">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Quick Actions</h2>
+                        <p>What would you like to do today?</p>
+                    </div>
+                </div>
+
+                <div class="quick-grid">
+
+                    <a href="templates.html" class="quick-card">
+                        <div class="quick-icon purple">✦</div>
+                        <h3>Create Presentation</h3>
+                        <p>Start building a new presentation.</p>
+                        <span>Get Started →</span>
+                    </a>
+
+                    <a href="templates.html" class="quick-card">
+                        <div class="quick-icon pink">▧</div>
+                        <h3>Explore Templates</h3>
+                        <p>Discover ready-made presentation designs.</p>
+                        <span>Explore →</span>
+                    </a>
+
+                    <a href="chatbot.html" class="quick-card">
+                        <div class="quick-icon blue">✧</div>
+                        <h3>AI Chatbot</h3>
+                        <p>Get help with your presentation ideas.</p>
+                        <span>Chat Now →</span>
+                    </a>
+
+                </div>
+
+            </section>
+
+            <!-- RECENT PRESENTATIONS -->
+            <section class="recent-section">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Recent Presentations</h2>
+                        <p>Your recently created work will appear here.</p>
+                    </div>
+
+                    <a href="saved.html" class="view-all">
+                        View All →
+                    </a>
+                </div>
+
+                <div class="empty-presentations">
+                    <div class="empty-icon">▤</div>
+                    <h3>No Presentations Yet</h3>
+                    <p>
+                        Your created presentations will appear here.
+                        Start creating your first one!
+                    </p>
+                    <a href="templates.html" class="empty-btn">
+                        Create Your First Presentation
+                    </a>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script type="module" src="../js/dashboard.js"></script>
+
+</body>
+</html>

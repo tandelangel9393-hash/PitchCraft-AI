@@ -1,0 +1,483 @@
+/* ==============================
+   PITCHCRAFT AI CHATBOT
+================================ */
+
+.chatbot-main {
+    margin-left: 260px;
+    min-height: 100vh;
+    padding: 30px;
+    background: #f7f6fc;
+}
+
+/* HEADER */
+
+.chatbot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 15px;
+}
+
+.chatbot-header h1 {
+    color: #292541;
+    font-size: 27px;
+    margin-bottom: 7px;
+}
+
+.chatbot-header p {
+    color: #88839b;
+    font-size: 14px;
+}
+
+.new-chat-btn {
+    border: none;
+    background: linear-gradient(135deg, #7965e8, #a46de5);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.new-chat-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(121, 101, 232, 0.2);
+}
+
+/* WORKSPACE */
+
+.chat-workspace {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 270px;
+    gap: 22px;
+    align-items: stretch;
+    min-height: 690px;
+}
+
+/* CHAT CONTAINER */
+
+.chat-container {
+    min-width: 0;
+    min-height: 690px;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border: 1px solid #eceaf4;
+    border-radius: 17px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(44, 37, 83, 0.04);
+}
+
+/* CHAT TOPBAR */
+
+.chat-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 23px;
+    border-bottom: 1px solid #eeedf3;
+}
+
+.bot-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.bot-avatar {
+    width: 43px;
+    height: 43px;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    background: linear-gradient(135deg, #7965e8, #bd7ce7);
+}
+
+.bot-profile h3 {
+    color: #302c49;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.bot-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #88839b;
+    font-size: 11px;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #39c98a;
+}
+
+.clear-chat-btn {
+    border: none;
+    background: #f4f1ff;
+    color: #7965d8;
+    padding: 9px 13px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.clear-chat-btn:hover {
+    background: #eae5ff;
+}
+
+/* CHAT MESSAGES */
+
+.chat-messages {
+    flex: 1;
+    min-height: 450px;
+    max-height: 620px;
+    overflow-y: auto;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* WELCOME SCREEN */
+
+.welcome-message {
+    margin: auto;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.welcome-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 18px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #7965e8, #bd7ce7);
+    color: white;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-message h2 {
+    color: #302c49;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.welcome-message > p {
+    color: #88839b;
+    font-size: 13px;
+    line-height: 1.7;
+    max-width: 430px;
+    margin: 0 auto 28px;
+}
+
+/* SUGGESTION CARDS */
+
+.suggestion-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    text-align: left;
+}
+
+.suggestion-card {
+    padding: 16px;
+    border: 1px solid #ece9f5;
+    border-radius: 12px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.suggestion-card:hover {
+    border-color: #a18deb;
+    background: #faf9ff;
+    transform: translateY(-2px);
+}
+
+.suggestion-card span {
+    color: #826be4;
+    font-size: 20px;
+}
+
+.suggestion-card strong {
+    color: #39344f;
+    font-size: 12px;
+}
+
+.suggestion-card small {
+    color: #908ba0;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* MESSAGE BUBBLES */
+
+.chat-message {
+    display: flex;
+    gap: 11px;
+    max-width: 85%;
+}
+
+.chat-message.user-message {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+.message-avatar {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eeeaff;
+    color: #7965d8;
+    font-weight: 700;
+}
+
+.user-message .message-avatar {
+    background: #7965e8;
+    color: white;
+}
+
+.message-content {
+    padding: 13px 16px;
+    border-radius: 12px;
+    background: #f5f3fc;
+    color: #49445f;
+    font-size: 13px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+}
+
+.user-message .message-content {
+    background: linear-gradient(135deg, #7965e8, #9872e5);
+    color: white;
+}
+
+/* INPUT AREA */
+
+.chat-input-area {
+    padding: 18px 22px;
+    border-top: 1px solid #eeedf3;
+    background: #ffffff;
+}
+
+.chat-input-box {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    padding: 10px 12px 10px 17px;
+    border: 1px solid #e7e3f1;
+    border-radius: 13px;
+    background: #faf9fd;
+}
+
+.chat-input-box:focus-within {
+    border-color: #927ee9;
+    box-shadow: 0 0 0 3px rgba(146, 126, 233, 0.08);
+}
+
+.chat-input-box textarea {
+    flex: 1;
+    min-width: 0;
+    max-height: 120px;
+    resize: none;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 13px;
+    color: #39344f;
+    padding: 8px 0;
+}
+
+.chat-input-box textarea::placeholder {
+    color: #a09bad;
+}
+
+.chat-input-box button {
+    width: 39px;
+    height: 39px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #7965e8, #a46de5);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.chat-input-box button:hover {
+    opacity: 0.9;
+}
+
+.chat-disclaimer {
+    text-align: center;
+    color: #aaa5b8;
+    font-size: 10px;
+    margin-top: 11px;
+}
+
+/* RIGHT INFORMATION PANEL */
+
+.chat-info-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.info-card {
+    background: #ffffff;
+    border: 1px solid #eceaf4;
+    border-radius: 15px;
+    padding: 21px;
+}
+
+.info-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    background: linear-gradient(135deg, #7965e8, #bd7ce7);
+    margin-bottom: 14px;
+}
+
+.info-card h3 {
+    color: #34304c;
+    font-size: 14px;
+    margin-bottom: 11px;
+}
+
+.info-card p {
+    color: #88839b;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.help-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.help-list li {
+    color: #77728b;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.help-list li::before {
+    content: "✓";
+    color: #826be4;
+    font-weight: 700;
+}
+
+.tip-card {
+    background: linear-gradient(135deg, #f2edff, #fcefff);
+    border: none;
+}
+
+.tip-card > span {
+    font-size: 25px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1150px) {
+    .chat-workspace {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .chat-info-panel {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tip-card {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .chatbot-main {
+        margin-left: 0;
+        padding: 20px 14px;
+    }
+
+    .chatbot-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .chat-container {
+        min-height: 600px;
+    }
+
+    .chat-messages {
+        padding: 18px;
+    }
+
+    .chat-info-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .tip-card {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .suggestion-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .chat-topbar {
+        padding: 14px;
+    }
+
+    .clear-chat-btn {
+        font-size: 10px;
+        padding: 8px;
+    }
+
+    .welcome-message h2 {
+        font-size: 20px;
+    }
+
+    .chat-input-area {
+        padding: 13px;
+    }
+
+    .chat-message {
+        max-width: 100%;
+    }
+}

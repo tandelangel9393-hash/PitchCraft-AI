@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | PitchCraft AI</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/signup.css">
+</head>
+
+<body class="auth-page">
+
+    <div class="auth-container">
+
+        <!-- Left Welcome Section -->
+        <section class="auth-left">
+
+            <a href="../index.html" class="auth-logo">
+                <span>✦</span> PitchCraft AI
+            </a>
+
+            <div class="auth-welcome">
+                <h1>Start Creating Something Amazing!</h1>
+
+                <p>
+                    Create your free account and turn your ideas
+                    into beautiful presentations with PitchCraft AI.
+                </p>
+
+                <div class="auth-decoration">
+                    <div class="decoration-card">
+                        <span>✦</span>
+                        <h3>Your Ideas</h3>
+                        <p>Deserve Better Presentations</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Right Signup Form -->
+        <section class="auth-right">
+
+            <div class="auth-form-wrapper">
+
+                <h2>Create Account</h2>
+                <p class="auth-subtitle">
+                    Sign up to get started with PitchCraft AI.
+                </p>
+
+                <form id="signupForm">
+
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input
+                            type="text"
+                            id="fullName"
+                            placeholder="Enter your full name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signupEmail">Email Address</label>
+                        <input
+                            type="email"
+                            id="signupEmail"
+                            placeholder="Enter your email"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+                        <input
+                            type="password"
+                            id="signupPassword"
+                            placeholder="Create a password"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            placeholder="Confirm your password"
+                            required
+                        >
+                    </div>
+
+                    <div class="terms-row">
+                        <input type="checkbox" id="agreeTerms" required>
+                        <label for="agreeTerms">
+                            I agree to the Terms & Conditions
+                        </label>
+                    </div>
+
+                    <button type="submit" class="auth-submit">
+                        Create Account
+                    </button>
+
+                    <p id="signupMessage" class="auth-message"></p>
+
+                </form>
+
+                <p class="auth-switch">
+                    Already have an account?
+                    <a href="login.html">Login</a>
+                </p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="../js/auth.js"></script>
+
+</body>
+</html>
+<script type="module" src="../js/auth.js"></script>

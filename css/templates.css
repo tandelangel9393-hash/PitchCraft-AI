@@ -1,0 +1,390 @@
+/* PITCHCRAFT AI - TEMPLATES PAGE */
+
+/* Reuse the existing dashboard sidebar design */
+@import url("dashboard.css");
+
+.templates-main {
+    padding-top: 42px;
+}
+
+/* PAGE HEADER */
+
+.templates-header {
+    margin-bottom: 30px;
+}
+
+.page-tag {
+    display: inline-block;
+    color: #7452df;
+    background: #f0ebff;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 13px;
+}
+
+.templates-header h1 {
+    font-size: 29px;
+    font-weight: 800;
+    margin-bottom: 9px;
+}
+
+.templates-header p {
+    color: #89859a;
+    font-size: 14px;
+}
+
+/* CREATE YOUR OWN */
+
+.create-own-section {
+    margin-bottom: 42px;
+}
+
+.create-own-card {
+    min-height: 260px;
+    background: linear-gradient(115deg, #6846d3, #9270e9, #bd88e9);
+    border-radius: 20px;
+    padding: 35px 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    overflow: hidden;
+    color: white;
+}
+
+.create-own-content {
+    max-width: 470px;
+}
+
+.create-label {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+    background: rgba(255,255,255,0.18);
+    padding: 8px 12px;
+    border-radius: 20px;
+    margin-bottom: 17px;
+}
+
+.create-own-content h2 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.create-own-content p {
+    color: rgba(255,255,255,0.88);
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+.create-own-btn {
+    border: none;
+    background: white;
+    color: #6846d3;
+    padding: 13px 20px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+.create-own-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* BLANK PRESENTATION PREVIEW */
+
+.create-own-preview {
+    padding: 15px 25px;
+}
+
+.blank-slide {
+    width: 250px;
+    height: 165px;
+    background: white;
+    color: #34245f;
+    border-radius: 12px;
+    padding: 23px;
+    box-shadow: 0 15px 35px rgba(46,22,110,0.2);
+    transform: rotate(4deg);
+}
+
+.blank-slide span {
+    font-size: 24px;
+    color: #8b63e7;
+}
+
+.blank-slide h3 {
+    font-size: 19px;
+    margin: 13px 0 6px;
+}
+
+.blank-slide p {
+    font-size: 10px;
+    color: #9993aa;
+}
+
+.slide-line {
+    width: 75%;
+    height: 5px;
+    border-radius: 10px;
+    background: #eee9fb;
+    margin-top: 14px;
+}
+
+/* SECTION HEADING */
+
+.ready-templates-section {
+    margin-bottom: 40px;
+}
+
+.templates-section-heading {
+    margin-bottom: 22px;
+}
+
+.templates-section-heading h2 {
+    font-size: 21px;
+    margin-bottom: 7px;
+}
+
+.templates-section-heading p {
+    font-size: 13px;
+    color: #9290a0;
+}
+
+/* SEARCH AND FILTER */
+
+.template-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.template-search {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    border: 1px solid #e9e5f1;
+    border-radius: 10px;
+    padding: 0 15px;
+    min-height: 46px;
+}
+
+.template-search span {
+    font-size: 22px;
+    color: #89859a;
+}
+
+.template-search input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #24213a;
+    font-size: 13px;
+}
+
+.template-controls select {
+    min-height: 46px;
+    min-width: 175px;
+    padding: 0 13px;
+    border: 1px solid #e9e5f1;
+    border-radius: 10px;
+    background: white;
+    color: #55516b;
+    outline: none;
+    font-size: 13px;
+}
+
+/* TEMPLATE GRID */
+
+.template-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.template-card {
+    min-width: 0;
+    overflow: hidden;
+    background: white;
+    border: 1px solid #eeeaf5;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.template-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(63,44,112,0.09);
+    border-color: #d9cdfb;
+}
+
+/* TEMPLATE PREVIEWS */
+
+.template-preview {
+    height: 190px;
+    padding: 17px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.preview-label {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    padding: 6px 9px;
+    border-radius: 5px;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.preview-content {
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.preview-content small {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.preview-content h3 {
+    font-size: 26px;
+    line-height: 1.15;
+    margin: 13px 0;
+}
+
+.preview-line {
+    width: 55px;
+    height: 4px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.8);
+    margin: auto;
+}
+
+/* INDIVIDUAL TEMPLATE COLORS */
+
+.business-preview {
+    background: linear-gradient(135deg, #172b4d, #426b9b);
+}
+
+.education-preview {
+    background: linear-gradient(135deg, #176b65, #55b5a0);
+}
+
+.technology-preview {
+    background: linear-gradient(135deg, #17244d, #5552b9);
+}
+
+.creative-preview {
+    background: linear-gradient(135deg, #c44b82, #f19a9e);
+}
+
+.marketing-preview {
+    background: linear-gradient(135deg, #e16a37, #f3b65e);
+}
+
+.startup-preview {
+    background: linear-gradient(135deg, #42236e, #a05bd0);
+}
+
+/* TEMPLATE INFORMATION */
+
+.template-info {
+    padding: 17px;
+}
+
+.template-info h3 {
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.template-info p {
+    font-size: 11px;
+    color: #9290a0;
+    margin-bottom: 16px;
+}
+
+.use-template-btn {
+    width: 100%;
+    border: 1px solid #e4dcf9;
+    background: #f5f1ff;
+    color: #7452df;
+    padding: 11px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+.use-template-btn:hover {
+    background: #7452df;
+    color: white;
+}
+
+/* EMPTY SEARCH RESULT */
+
+.no-templates {
+    text-align: center;
+    padding: 40px 15px;
+    color: #89859a;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+    .template-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 750px) {
+    .create-own-card {
+        padding: 28px;
+    }
+
+    .create-own-preview {
+        display: none;
+    }
+
+    .template-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .template-controls select {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .template-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .templates-header h1 {
+        font-size: 24px;
+    }
+
+    .create-own-content h2 {
+        font-size: 25px;
+    }
+}
